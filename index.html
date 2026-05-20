@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Algorítmico: Fibonacci y Primos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>✨ Plataforma Algorítmica que resuelven problemas: Fibonacci y Números Primos en la vida real ✨</h1>
+        <p class="subtitulo"> 🌍 Aplicación de modelos lógicos en biología, ciberseguridad y finanzas 🌍</p>
+    </header>
+
+    <main class="grid-layout">
+
+        <section class="tarjeta">
+            <div class="tarjeta-header color-poblacion">
+                <h2>🐰 Crecimiento de Población</h2>
+            </div>
+            <div class="tarjeta-body">
+                <h3>📌 Contexto del Problema Real</h3>
+                <p>En condiciones biológicas controladas, colonias de bacterias, insectos o conejos incrementan su tamaño de forma proporcional a las generaciones anteriores, permitiendo predecir el ritmo reproductivo ideal.</p>
+                
+                <h3>⚙️ Explicación del Algoritmo</h3>
+                <p>El simulador calcula la cantidad total de parejas combinando las generaciones previas paso a paso:</p>
+                <p>1. <b>Punto de partida:</b> Comenzamos el primer mes con una pareja joven y el segundo mes con esa misma pareja ya madura lista para reproducirse.</p>
+                <p>2. <b>Ciclo mensual:</b> A partir del tercer mes, el programa inicia un conteo repetitivo donde la población actual siempre es el resultado de sumar las poblaciones de los dos meses anteriores.</p>
+                <p>3. <b>Resultado final:</b> El ciclo se detiene automáticamente al llegar al mes ingresado por el usuario, mostrando cuántas parejas totales existen bajo este modelo natural.</p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="mesesPoblacion">Número de meses o etapas a simular:</label>
+                        <input type="number" id="mesesPoblacion" value="5" min="1" max="40" required>
+                    </div>
+                    <button type="button" id="btnPoblacion" class="btn-poblacion">🚀 Ejecutar Simulación</button>
+                </form>
+
+                <div class="pantalla-resultado" id="resPoblacion">
+                    <span class="vacio">Esperando datos numéricos... 🔢</span>
+                </div>
+
+        </section>
+
+        <section class="tarjeta">
+            <div class="tarjeta-header color-seguridad">
+                <h2>🔐 Validación de Contraseñas</h2>
+            </div>
+            <div class="tarjeta-body">
+                <h3>📌 Contexto del Problema Real</h3>
+                <p>La seguridad informática y criptografía digital protegen claves y datos mediante propiedades matemáticas exclusivas de números primos, garantizando que las claves sean inmunes a hackeos directos.</p>
+                
+                <h3>⚙️ Explicación del Algoritmo</h3>
+                <p>El sistema pone a prueba el número ingresado para verificar si es un "bloque numérico indestructible" (un número primo):</p>
+                <p>1. <b>Regla base:</b> El número 1 se descarta de inmediato porque la seguridad criptográfica requiere valores mayores.</p>
+                <p>2. <b>Prueba de división:</b> El programa realiza un recorrido automático intentando dividir tu número por cada uno de los números intermedios (empezando desde el 2 hasta llegar justo antes de tu número).</p>
+                <p>3. <b>Veredicto instantáneo:</b> Si alguna división da un residuo de cero, significa que el número "se rompió" (es compuesto y se mostrara que no es primo) y la clave es vulnerable. Si el ciclo termina y nadie pudo dividirlo exactamente, se aprueba como una clave segura y que es primo.</p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="numeroPrimo">Código numérico a verificar:</label>
+                        <input type="number" id="numeroPrimo" value="17" min="1" max="999999" required>
+                    </div>
+                    <button type="button" id="btnSeguridad" class="btn-seguridad">🚀 Verificar Criptografía</button>
+                </form>
+
+                <div class="pantalla-resultado" id="resSeguridad">
+                    <span class="vacio">Esperando datos numéricos... 🔢</span>
+                </div>
+
+        </section>
+
+        <section class="tarjeta">
+            <div class="tarjeta-header color-ahorro">
+                <h2>💰 Plan de Ahorro Progresivo</h2>
+            </div>
+            <div class="tarjeta-body">
+                <h3>📌 Contexto del Problema Real</h3>
+                <p>Para construir hábitos financieros sólidos y dinámicos, una persona incrementa progresivamente sus depósitos mensuales guiándose por la serie lógica, potenciando la acumulación final de capital.</p>
+                
+                <h3>⚙️ Explicación del Algoritmo</h3>
+                <p>El programa calcula cuánto dinero logras guardar al usar una alcancía que te exige un esfuerzo cada vez mayor:</p>
+                <p>1. <b>Depósito variable:</b> En vez de ahorrar siempre lo mismo, el sistema calcula el monto de cada mes sumando lo que depositaste en los dos meses anteriores.</p>
+                <p>2. <b>La caja fuerte:</b> Al mismo tiempo que calcula el depósito del mes, el algoritmo lo va sumando de inmediato dentro de una variable "acumuladora" (como una alcancía real donde el dinero se junta).</p>
+                <p>3. <b>Balance total:</b> Al finalizar la cantidad de meses que elegiste, el sistema te muestra la suma total de todo el dinero que se fue acumulando periodo tras periodo.</p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="mesesAhorro">Periodo de meses planificado:</label>
+                        <input type="number" id="mesesAhorro" value="6" min="1" max="40" required>
+                    </div>
+                    <button type="button" id="btnAhorro" class="btn-ahorro">🚀 Calcular Presupuesto</button>
+                </form>
+
+                <div class="pantalla-resultado" id="resAhorro">
+                    <span class="vacio">Esperando datos numéricos... 🔢</span>
+                </div>
+
+        </section>
+
+    </main>
+
+</body>
+<script src="script.js"></script>
+</html>
